@@ -1,0 +1,122 @@
+.status {
+    display: flex;
+}
+
+/* Pending donation */
+.pending {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pending-data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pending-data th,
+.pending-data td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
+
+.pending-data th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pending-data tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pending-data tr:last-child td {
+    border-bottom: none;
+}
+
+.complete-btn{
+    background-color: #007BFF;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Previous donation */
+.completed {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completed-data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.completed-data th,
+.completed-data td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
+.completed th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.completed-data tr:hover {
+    background-color: #f1f1f1;
+}
+
+.donation-table th,
+.donation-table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
+.completed-data tr:last-child td {
+    border-bottom: none;
+}
+
+.donation-table th {
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.donation-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.donation-table tr:last-child td {
+    border-bottom: none;
+}

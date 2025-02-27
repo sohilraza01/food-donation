@@ -1,0 +1,59 @@
+.sidebar-link{
+  display: flex;
+}
+
+.sidebar-main{
+  width: 80%;
+  height: 130px;  
+  display: flex;
+  gap: 50px;
+  margin: 20px;
+  
+}
+
+.sidebar-admin{
+  width: 100%;
+  background-color: blue;
+  font-size:24px;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.sidebar-agent{
+  width: 100%;
+  background-color: yellow;
+  font-size:24px;
+  font-weight: 600;
+  color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+.sidebar-not-complete{
+  width: 100%;
+  background-color: red;
+  font-size:24px;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.sidebar-completed{
+  width: 100%;
+  background-color: green;
+  font-size:24px;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.count{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.count span{
+  font-size: 35px;
+}

@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  footer {
+    background-color: #2d3436; 
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+ 
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-logo .food-logo {
+    width: 100px; 
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo .mission-statement {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  
+  /* Footer links section */
+  .footer-links {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-links li {
+    margin: 10px 0;
+  }
+  
+  .footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    color: #55efc4;
+  }
+  
+  /* Footer contact section */
+  .footer-contact {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+ 
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+  }
+  .footer_icons{
+    height: 30px;
+    transition: transform .3s;
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer-links img:hover{
+    transform: scale(1.1)
+}
+  
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+
+
+  
