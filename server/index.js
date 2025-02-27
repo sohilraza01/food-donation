@@ -5,8 +5,8 @@ const User = require('./model/User');
 const Donation  = require('./model/Donation');
 const bcrypt = require('bcryptjs');
 
-const PORT = process.env.PORT;
-const db_URI = process.env.DB_URI;
+const PORT = 8800;
+const db_URI = 'mongodb+srv://sohilraza:sohilraza@cluster0.yglab.mongodb.net/food_donation_db?retryWrites=true&w=majority&appName=Cluster0';
 
 const app = express();
 
