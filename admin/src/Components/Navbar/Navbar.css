@@ -1,37 +1,76 @@
+/* ✅ Basic Navbar Styling */
 nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #54cff0;
-    padding: 17px 20px;
-    position:sticky;
-    top: 0;
-    
-    
-  }
-  
-  .nav-left {
-    color: #fff;
-    /* font-family: Arial, Helvetica, sans-serif; */
-  }
-  
-  .nav-right {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-  }
-  .nav-left h1 a{
-    color: #fff;
-    text-decoration: none;
-  }
-  .nav-right li a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #54cff0;
+  padding: 17px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-right li {
+  margin: 0 15px;
+}
+
+.nav-right li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-right li a:hover {
+  color: #333;
+}
+
+/* ✅ Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ✅ Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block;
   }
 
- 
+  .nav-right {
+      display: none; /* Hide links initially */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #54cff0;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .nav-right.active {
+      display: flex; /* Show links when menu is open */
+  }
+
+  .nav-right li {
+      margin: 15px 0;
+  }
+}

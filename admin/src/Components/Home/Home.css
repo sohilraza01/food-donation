@@ -1,19 +1,39 @@
 /* Home.css */
 .image-gallery {
-    display: flex;
-    overflow: hidden;
-    width: 40%;
-    margin: 20px auto;
-    /* margin-top: 70px; */
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    border: 2px #ddd;
-    border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 40%;
+  max-width: 500px;
+  min-width: 280px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.images {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .image-gallery {
+      width: 60%;
   }
-  .images{
-    width: 100%;
-    height: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+      width: 80%;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+      width: 95%;
+  }
+}

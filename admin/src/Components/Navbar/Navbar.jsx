@@ -1,10 +1,12 @@
 import './Navbar.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons for menu
 
 const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [role, setRole] = useState('');
+    const [menuOpen, setMenuOpen] = useState(false); // ✅ State for menu toggle
     const location = useLocation();  
     const navigate = useNavigate();
 
@@ -20,14 +22,6 @@ const Navbar = () => {
         }
     }, [location]);
 
-    // Logout Handler
-    // const handleLogout = () => {
-    //     localStorage.removeItem('user');
-    //     setIsLoggedIn(false);
-    //     setRole('');
-    //     navigate('/');
-    // };
-
     return (
         <nav>
             <div className="nav-left">
@@ -38,22 +32,17 @@ const Navbar = () => {
                 </h1>
             </div>
 
-            <ul className="nav-right">
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/mission">Our Mission</Link></li>
-                {!isLoggedIn && <li><Link to="/login">Login</Link></li>}
-                <li><Link to="/contact">Contact Us</Link></li>
+            {/* ✅ Hamburger Icon */}
+            <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <FaTimes /> : <FaBars />}  {/* Show 'X' when open */}
+            </div>
 
-                {/* {isLoggedIn && (
-                    <li>
-                        <button 
-                            className="logout-btn" 
-                            onClick={handleLogout}
-                        >
-                            Logout
-                        </button>
-                    </li>
-                )} */}
+            {/* ✅ Navigation Links */}
+            <ul className={`nav-right ${menuOpen ? "active" : ""}`}>
+                <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
+                <li><Link to="/mission" onClick={() => setMenuOpen(false)}>Our Mission</Link></li>
+                {!isLoggedIn && <li><Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link></li>}
+                <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
             </ul>
         </nav>
     );

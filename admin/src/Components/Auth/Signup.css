@@ -1,57 +1,116 @@
-.signup{
+.signup {
     width: 40%;
+    max-width: 500px;
+    min-width: 300px;
     margin: 2% auto;
     background-color: #fff;
-   box-shadow: 0px 0px 10px #333; 
-   border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.3);
+    border-radius: 10px;
+    padding: 20px;
 }
-.signup-form{
+
+.title {
+    height: 5rem;
+    background-color: rgb(75, 75, 231);
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    color: white;
+    text-align: center;
+    padding-top: 1.3rem;
+    margin-bottom: 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.signup-form {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin-left: 10%;
-    padding: 0 10px;
-    
-}
-.title{
-    height: 5rem;
-    background-color: rgb(75, 75, 231);
-    font-size: 2rem;
-    color: white;
-    padding-top: 1.3rem;
-    margin-bottom: 4rem;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
+    margin: auto;
 }
 
-.signup-form input{
-    height: 6vh;
+.signup-form label {
+    text-align: left;
     font-size: 1.4rem;
-    padding: 10px 10px;
+    color: #555;
+}
+
+.signup-form input {
+    height: 6vh;
+    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin: 0 0 25px 0;
+    margin-bottom: 20px;
 }
-.signup-form label{
-    text-align: left;
-    margin: 0;
-}
-.role{
-    width: 105px;
-    padding: 3px 5px;
+
+.role {
+    width: 120px;
+    padding: 5px;
     font-size: 1.4rem;
     border: 1px solid #ddd;
+    border-radius: 5px;
 }
-#btn{
-    margin: 5% 20%;
+
+/* ✅ Improved Button Styling */
+#btn {
+    width: 60%;
+    height: 50px;
+    margin: 5% auto;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(75, 75, 231);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
     border-radius: 10px;
-
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
-.signup-form p{
-    margin: 0 0 20px 0;
-    font-size: 1.3rem;
+
+#btn:hover {
+    background-color: rgb(55, 55, 211);
+}
+
+.signup-form p {
+    text-align: center;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+    margin-bottom: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .signup {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup {
+        width: 70%;
+    }
+    .signup-form input {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup {
+        width: 90%;
+        padding: 15px;
+    }
+    .signup-form input {
+        font-size: 1.2rem;
+        height: 5.5vh;
+    }
+    .role {
+        width: 100px;
+        font-size: 1.2rem;
+    }
+    #btn {
+        width: 80%;
+        height: 45px;
+        font-size: 1.3rem;
+    }
 }

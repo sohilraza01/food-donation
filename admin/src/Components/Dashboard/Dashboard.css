@@ -1,59 +1,108 @@
-.sidebar-link{
+.sidebar-link {
   display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  justify-content: center;
+  gap: 20px;
 }
 
-.sidebar-main{
+.sidebar-main {
   width: 80%;
-  height: 130px;  
+  max-width: 900px;
   display: flex;
-  gap: 50px;
-  margin: 20px;
-  
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
 }
 
-.sidebar-admin{
+.sidebar-admin, 
+.sidebar-agent, 
+.sidebar-not-complete, 
+.sidebar-completed {
   width: 100%;
+  max-width: 250px;
+  height: auto;
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-admin {
   background-color: blue;
-  font-size:24px;
-  font-weight: 600;
   color: white;
-  padding: 20px;
-  border-radius: 10px;
 }
-.sidebar-agent{
-  width: 100%;
+
+.sidebar-agent {
   background-color: yellow;
-  font-size:24px;
-  font-weight: 600;
   color: #444;
-  padding: 20px;
-  border-radius: 10px;
 }
-.sidebar-not-complete{
-  width: 100%;
+
+.sidebar-not-complete {
   background-color: red;
-  font-size:24px;
-  font-weight: 600;
   color: white;
-  padding: 20px;
-  border-radius: 10px;
 }
-.sidebar-completed{
-  width: 100%;
+
+.sidebar-completed {
   background-color: green;
-  font-size:24px;
-  font-weight: 600;
   color: white;
-  padding: 20px;
-  border-radius: 10px;
 }
 
-.count{
-display: flex;
-justify-content: space-between;
-align-items: center;
+.count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
-.count span{
-  font-size: 35px;
+.count span {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: bold;
+}
+
+/* ✅ Hover Effect */
+.sidebar-admin:hover,
+.sidebar-agent:hover,
+.sidebar-not-complete:hover,
+.sidebar-completed:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar-main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-main {
+    width: 95%;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+  }
+  
+  .sidebar-admin, 
+  .sidebar-agent, 
+  .sidebar-not-complete, 
+  .sidebar-completed {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-admin, 
+  .sidebar-agent, 
+  .sidebar-not-complete, 
+  .sidebar-completed {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .count span {
+    font-size: 1.8rem;
+  }
 }
